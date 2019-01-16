@@ -56,3 +56,4 @@ if (guestName) {
         console.log("no niestety nie wejdziesz");
     }
 }
+
