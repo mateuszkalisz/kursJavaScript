@@ -48,3 +48,39 @@ showMeTExtMyArrowFunc("hej hej heloł!");
 //przypisanie funkcji do nowej zmiennej
 
 const addN = addNumbers; // tworzymy referencje (nie tworzymy nowej funkcji)
+
+//przyklad 1
+
+//funkcja ktora wplywa na program ale nie zwraca wartosci
+
+//#1
+const divideBy2 = function (number) {
+    console.log(number / 2);
+}
+
+someNumber = 0;
+//#2
+const add = function () {
+    someNumber++;
+    console.log(someNumber);
+}
+
+//przyklad 2 - funkcja która zwraca
+
+const divideBy3 = function (num) {
+    return num / 3;
+}
+
+const result3 = divideBy3(9);
+
+//przyklad 3 - funkcja z efektem ubocznym i zwracajaca wartosc
+const divideBy5 = function (number5) {
+    const res = number5 / 5;
+    console.log(res);
+    return res;
+}
+
+const result5 = divideBy5(20);
+
+
+divideBy5.length; //podaje ile ma parametrów w deklaracji
