@@ -94,7 +94,7 @@ function showInfoAboutUser(age, name, sex) {
     } else if (arguments.length === 1) {
         console.log('uzytkownik ma ' + age + 'lat. Nic o nim nie wiemy');
     } else if (arguments.length === 2) {
-        console.log
+        console.log(`uzytkownik ma ${age} lat i ma na imie ${name}`);
     } else {
         console.log(`uzytkownik ma ${age} lat i ma na imie ${name} oraz jest ${sex}`);
     }
