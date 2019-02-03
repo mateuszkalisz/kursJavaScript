@@ -50,7 +50,7 @@ document.querySelector("ul").appendChild(liElement);
 
 //przyklad
 const divElement = document.createElement("div");
-divElement.classList.add = "klasaDiv";
+divElement.classList.add("klasaDiv");
 divElement.textContent = "taki sobie nowy DIV";
 divElement.style.fontSize = "20px";
 divElement.style.textDecoration = "underline";
