@@ -23,7 +23,9 @@ let size = 10;
 function changeSize() {
 
     for (let i = 0; i < liElements.length; i++) {
-        liElements[i].style.display = "block";
+        if (liElements[i].style.display === "") {
+            liElements[i].style.display = "block";
+        }
         liElements[i].style.fontSize = size + "px";
     }
 
