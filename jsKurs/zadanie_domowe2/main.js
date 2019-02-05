@@ -6,6 +6,8 @@ let size = 10;
 let flag = true;
 newDiv.style.width = "100%";
 newDiv.style.position = "fixed";
+newDiv.style.top = "0"
+newDiv.style.left = "0";
 newDiv.style.height = `${size}px`;
 newDiv.style.backgroundColor = "blue";
 
