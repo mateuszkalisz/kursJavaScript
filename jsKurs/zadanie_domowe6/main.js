@@ -35,9 +35,9 @@ const changeColor = (e) => {
     switch (e.keyCode) {
         case 38:
             {
-                red -= 1;
-                green -= 1;
-                blue -= 1;
+                red--;
+                green--;
+                blue--;
                 document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
 
                 if (red, green, blue === 0) {
@@ -50,9 +50,9 @@ const changeColor = (e) => {
 
         case 40:
             {
-                red += 1;
-                green += 1;
-                blue += 1;
+                red++;
+                green++;
+                blue++;
                 document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
 
                 if (red, green, blue === 255) {
