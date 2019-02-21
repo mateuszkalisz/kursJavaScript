@@ -35,6 +35,7 @@ cleanAdvices = (e) => {
     e.preventDefault();
     adviceArray.splice(0, adviceArray.length);
     console.log(adviceArray);
+    document.body.querySelector("h1").textContent = "";
     alert("Tablica rad została wyczyszczona!");
 }
 
