@@ -13,6 +13,11 @@ addAdvice = (e) => {
     const input = document.body.querySelector("input");
     const item = input.value;
 
+    if (input.value.length === 0) {
+        alert("nie podano żadnej wartości!");
+        return;
+    }
+
     if (input.value.length > 0) {
         for (advice of adviceArray) {
             if (advice === item) {
@@ -49,11 +54,12 @@ showOptionsMethod = () => {
     if (adviceArray.length === 0) {
         alert("brak możliwości, należy je wprowadzić!");
     } else {
-        let arrayBox = "";
-        for (let i = 0; i < adviceArray.length; i++) {
-            arrayBox += `${i+1}. ${adviceArray[i]} ,`;
-        }
-        alert(arrayBox);
+        // let arrayBox = "";
+        // for (let i = 0; i < adviceArray.length; i++) {
+        //     arrayBox += `${i+1}. ${adviceArray[i]} ,`;
+        // }
+        // alert(arrayBox);
+        alert(adviceArray.join(" ----- "));
     }
 }
 
