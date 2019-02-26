@@ -29,6 +29,21 @@ const aiChoice = function () {
     return aiHand;
 }
 
+const checkResult = function (player, ai) {
+
+    if (player === ai) {
+        //console.log("remis");
+        return "draw";
+    } else if ((player === "papier" && ai === "kamień") || (player === "kamień" && ai === "nożyczki") || (player === "nożyczki") && (ai === "papier")) {
+        //console.log("wygrałeś")
+        return "win";
+    } else {
+        //console.log("przegrałeś");
+        return "loss";
+    }
+
+}
+
 //funkcja sterująca
 const startGame = function () {
     if (!game.playerHand) {
@@ -37,6 +52,8 @@ const startGame = function () {
 
     game.aiHand = aiChoice();
     console.log(game.aiHand);
+    const gameResult = checkResult(game.playerHand, game.aiHand);
+    console.log(gameResult);
 
 }
 
