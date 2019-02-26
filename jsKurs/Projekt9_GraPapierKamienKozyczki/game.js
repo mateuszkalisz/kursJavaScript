@@ -21,3 +21,23 @@ function handSelection() {
 }
 
 hands.forEach(hand => hand.addEventListener("click", handSelection));
+
+
+const aiChoice = function () {
+    const index = Math.floor(Math.random() * 3);
+    const aiHand = hands[index].dataset.option;
+    return aiHand;
+}
+
+//funkcja sterująca
+const startGame = function () {
+    if (!game.playerHand) {
+        return alert("wybierz dłoń!");
+    }
+
+    game.aiHand = aiChoice();
+    console.log(game.aiHand);
+
+}
+
+document.querySelector(".start").addEventListener("click", startGame);
