@@ -73,6 +73,11 @@ const publishResult = (player, ai, result) => {
     }
 }
 
+function endGame() {
+    document.querySelector(`[data-option="${game.playerHand}"]`).style.boxShadow = "";
+    game.playerHand = "";
+}
+
 //funkcja sterująca
 const startGame = function () {
     if (!game.playerHand) {
@@ -86,6 +91,7 @@ const startGame = function () {
 
     publishResult(game.playerHand, game.aiHand, gameResult);
 
+    endGame();
 }
 
 document.querySelector(".start").addEventListener("click", startGame);
