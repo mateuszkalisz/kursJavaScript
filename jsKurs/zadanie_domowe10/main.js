@@ -40,12 +40,14 @@ const changeSlide = function () {
     changeDot();
 }
 
+let indexOfSetInterval = setInterval(changeSlide, time);
+
 const keyChangeSlide = function (e) {
 
     if (e.keyCode === 37) {
 
         if (active === 0) {
-            active = 2;
+            active = slideList.length - 1;
         } else {
             active--;
 
@@ -53,7 +55,7 @@ const keyChangeSlide = function (e) {
         clearInterval(indexOfSetInterval);
 
     } else if (e.keyCode === 39) {
-        if (active === 2) {
+        if (active === slideList.length - 1) {
             active = 0;
         } else {
             active++;
@@ -65,8 +67,7 @@ const keyChangeSlide = function (e) {
     h1.textContent = slideList[active].text;
 
     changeDot();
+    indexOfSetInterval = setInterval(changeSlide, time);
 
 }
 window.addEventListener("keydown", keyChangeSlide);
-
-const indexOfSetInterval = setInterval(changeSlide, time);
