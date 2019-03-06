@@ -8,7 +8,7 @@ const timer = () => {
 
     setInterval(changeTime, 1000);
 
-    return timer;
+    return changeTime;
 }
 
 const currentTime = timer();
