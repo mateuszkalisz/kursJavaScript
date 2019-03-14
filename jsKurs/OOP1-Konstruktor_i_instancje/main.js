@@ -91,3 +91,27 @@ Array.prototype.deleteAllFromArray = function () {
 Array.prototype.deleteElement = function (index) {
     return this.splice(index, 1);
 }
+
+arr.__proto__; //prototyp konstruktora
+
+arr.__proto__.__proto__; // prototyp object
+
+arr.__proto__.__proto__.__proto__ // null
+Object.prototype.age = 20;
+
+//instanceof
+
+arr instanceof Array;
+arr instanceof Object;
+arr instanceof Citizen;
+arr instanceof Function;
+
+//Object.getprototypeof
+
+Object.getPrototypeOf(arr);
+
+
+////
+
+const janusz = new Citizen();
+//janusz.__proto__ = Citizen.prototype;
