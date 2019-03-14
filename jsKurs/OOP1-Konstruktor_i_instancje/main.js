@@ -40,3 +40,54 @@ const arek = new Person("Arek", 20);
 const monika = new Person("Monika", 30);
 
 arek.addChildren("Asia");
+
+///prototyp to obiekt funkcji konstruktora, wspoldzielony przez wszystkie obiekty stworzone na bazie tego konstruktora, kazdy z nich ma do niego dostep
+
+class User {
+
+}
+
+function Player() {
+
+}
+
+Player.prototype.age = 25;
+
+const marek = new Player();
+const marta = new User();
+
+console.log(marek.constructor);
+console.log(marta.constructor);
+
+const darek = new marek.constructor();
+
+//dodawanie elementow do prototypu
+
+function Citizen(country, citizenship) {
+    this.country = country;
+    this.citizenship = citizenship;
+
+    // this.changeCitizenship = function (citizenship) {
+    //     this.citizenship = citizenship;
+    //     console.log(`Zmiana za pomocą metod w instancji na obywatelstwo ${this.citizenship}`);
+    // }
+}
+
+Citizen.prototype.changeCitizenship = function (citizenship) {
+    this.citizenship = citizenship;
+    console.log(`Zmiana za pomocą metod w prototypie na obywatelstwo ${this.citizenship}`);
+}
+
+const zenek = new Citizen("Polska", "polskie");
+
+//rozszerzenie prototypu istniejacych konstruktorow
+
+const arr = [1, 2, 3, 4, 5];
+
+Array.prototype.deleteAllFromArray = function () {
+    this.splice(0, this.length);
+}
+
+Array.prototype.deleteElement = function (index) {
+    return this.splice(index, 1);
+}
