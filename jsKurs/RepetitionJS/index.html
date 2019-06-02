@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+    <div>
+        <h1>Ankieta o aktywnosci fizycznej</h1>
+        <form>
+            <div class="row">
+                <label for="name"> Podaj imie
+                    <input id="name" type="text"><span id="nameAnswer"></span>
+                </label>
+            </div>
+            <div class="row">
+                <label for="age"> Podaj wiek
+                    <input id="age" type="number"><span id="ageAnswer"></span>
+                </label>
+            </div>
+            <div class="row">
+                <label for="gender"> Podaj płeć
+                    <input id="gender" type="text"><span id="genderAnswer"></span>
+                </label>
+            </div>
+            <div class="row">
+                <fieldset>
+                    <legend>Zaznacz jaką masz aktywność fizyczną</legend>
+                    <div>
+                        <label for="none">
+                            <input name="activity" id="none" type="radio" checked> Brak aktywności fizycznej
+                        </label>
+                    </div>
+                    <div>
+                        <label for="low">
+                            <input name="activity" id="low" type="radio"> 1-3 w tygodniu
+                        </label>
+                    </div>
+                    <div>
+                        <label for="medium">
+                            <input name="activity" id="medium" type="radio"> 4-6 w tygodniu
+                        </label>
+                    </div>
+                    <div>
+                        <label for="high">
+                            <input name="activity" id="high" type="radio"> 7 dni lub więcej
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <button>Wyślij formularz</button>
+            <button class="refresh">Odśwież</button>
+        </form>
+
+        <div class="answer"></div>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
