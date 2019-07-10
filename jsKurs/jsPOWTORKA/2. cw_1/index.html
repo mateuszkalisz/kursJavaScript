@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+
+button{
+    display: block;
+    margin: 0 auto;
+    font-size: 30px;
+    color: darkcyan;
+    background-color: black;
+    border: 5px solid darkcyan;
+}
+
+div{
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    float: left;
+    margin: 5px;
+    line-height: 30px;
+}
+
+button:hover{
+    background-color: darkcyan;
+    color: black;
+    border-color: black;
+    cursor: pointer;
+}
+
+.circle{
+    color: black;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid black;
+}
+
+</style>
+
+<body>
+    <button>KLIKNIJ</button>
+
+
+
+    <script>
+    const btn = document.querySelector("button");
+
+    let i = 1;
+
+    const addElement = () =>{
+        // console.log("klik")
+        const newDiv = document.createElement("div");
+        newDiv.textContent = i;
+        if(i%5===0){
+            newDiv.className = "circle";
+        }
+        document.body.appendChild(newDiv);
+        i++;
+        
+    }
+
+    btn.addEventListener("click", addElement);
+    
+    </script>
+</body>
+</html>
