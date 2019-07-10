@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    div{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    input{
+        font-size: 30px;
+        width: 300px;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    h2{
+        display: block;
+        margin-top: 20px;
+        background-color: darkcyan;
+        width: 300px;
+        height: 100px;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Podaj haslo</h1>
+        <input type="password">
+        <h2></h2>
+    </div>
+
+    <script>
+    
+    const input = document.querySelector("input");
+    const h2 = document.querySelector("h2");
+
+    input.addEventListener("input", (e)=>{
+        if(e.target.value == "mateusz"){
+            h2.textContent = "Witaj Mateuszu"
+        }
+        else if(e.target.value == "maja"){
+            h2.textContent = "witaj Maju"
+        }
+        else{
+            h2.textContent = "nie znam Cię"
+        }
+    })
+    
+    </script>
+</body>
+</html>

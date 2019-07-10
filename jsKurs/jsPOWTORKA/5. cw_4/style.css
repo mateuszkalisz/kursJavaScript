@@ -1,0 +1,18 @@
+button{
+    box-sizing: border-box;
+    font-size: 30px;
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5 15px;
+    margin: 0 auto;
+    line-height: 40px;
+}
+
+.show{
+    display: block;
+}
+
+.blank{
+    display: none;
+}
